@@ -13,6 +13,19 @@
     max-width: 300px;
     height: auto;
   }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    display: block;
+  }
+
+  p.action {
+    text-decoration: underline;
+    color: blue;
+  }
+  .ad-300x250 p.action {
+    color: inherit;
+  }
 
   .ad-300x250 div {
     font-size: 0.875em;
@@ -26,9 +39,6 @@
     padding: 0.5em 1.5em;
     box-sizing: border-box;
   }
-  .ad-300x250 div a {
-    color: inherit;
-  }
   .ad-300x250 h1 {
     position: absolute;
     top: 1.5em;
@@ -37,6 +47,9 @@
   }
 
   .ad-300x600 {
+    height: 100%;
+  }
+  .ad-300x600 a {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -52,6 +65,9 @@
   }
 
   .ad-970x250 {
+    height: 100%;
+  }
+  .ad-970x250 a {
     height: 100%;
     display: flex;
     flex-direction: row;
