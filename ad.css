@@ -1,0 +1,67 @@
+
+  html, body {
+    height: 100%;
+  }
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+    font: 100%/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .ad-300x250 div {
+    font-size: 0.875em;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 1.5em;
+    box-sizing: border-box;
+  }
+  .ad-300x250 div a {
+    color: inherit;
+  }
+  .ad-300x250 h1 {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    font-size: inherit;
+  }
+
+  .ad-300x600 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .ad-300x600 div {
+    padding: 1.5em;
+  }
+  .ad-300x600 h1 {
+    font-size: inherit;
+  }
+
+  .ad-970x250 {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+  }
+  .ad-970x250 h1 {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    font-size: inherit;
+  }
