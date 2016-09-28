@@ -9,25 +9,30 @@
 <body>
 
 <div class="ad-970x250">
-  <a href="">
-    <img src="https://www-kiva-org.global.ssl.fastly.net/img/w960h600/154db2221ee7e35a5ee0f8ec4cb04c03.jpg" alt="" />
+  <a href="" id="lend_link">
+    <div class="image"><img id="loan_image" src="" alt="" /></div>
 
-    <div>
-      <h1>Kiva</h1>
+    <div class="details">
+      <h1><img src="../images/kiva-paypal-white.png" alt="Kiva PayPal" width="200" /></h1>
 
-      <h2>Seth</h2>
+      <h2 class="name" id="name"></h2>
+      <p class="location" id="location"></p>
 
-      <p class="location">United States</p>
-      <p class="description">A loan of $5,000 helps me produce my original lighting designs at a lower cost per unit!</p>
+      <p class="description" id="description"></p>
       <p class="progress">
-        <progress max="100" value="68.5">68.5%</progress>
-        $1,575 to go
+        <progress id="progress" max="100" value="0"></progress>
+        <span class="text" id="progress_text"></span>
       </p>
 
       <p class="action">Lend Now</p>
     </div>
   </a>
 </div>
+
+<script>
+  var imageSize = 'w300h250';
+</script>
+<script type="text/javascript" src="../ad.js"></script>
 
 </body>
 </html>

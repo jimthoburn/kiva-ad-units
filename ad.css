@@ -10,7 +10,7 @@
   }
 
   img {
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
   }
   a {
@@ -20,30 +20,186 @@
   }
 
   p.action {
-    text-decoration: underline;
-    color: blue;
+    display: inline-block;
+    background-color: rgb(38, 59, 128); /* @dark-blue */
+    background: rgb(100, 165, 68); /* @green */
+    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
+    color: white;
+    font-weight: bold;
+    padding: 0.75em 2.25em;
+    border-radius: 2.5em;
   }
+  .image {
+    background: black;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  progress {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+     appearance: none;
+
+    width: 100%;
+    height: 1.5em;
+  }
+
+  /* KUDOS: https://css-tricks.com/html5-progress-element/ */
+  progress[value]::-webkit-progress-bar {
+    /*
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    */
+    background-color: #efefef;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background: rgb(100, 165, 68); /* @green */
+    /*
+    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68));
+    border-radius: 2px; 
+    */
+  }
+
+  .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .ad-970x250 .progress {
+    left: 300px;
+    width: 670px;
+  }
+  .progress .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .name {
+    display: inline;
+    font-size: inherit;
+    margin: 0;
+    color: rgb(0, 156, 222); /* @blue */
+  }
+  .ad-300x250 .name {
+    color: rgb(30, 186, 232); /* @blue */
+  }
+  .location {
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .ad-300x250 h1,
+  .ad-300x600 h1,
+  .ad-970x250 h1 {
+    font-size: inherit;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+  }
+  .ad-300x250 h1 {
+    top: 0.25em;
+    right: auto;
+    left: 1em;
+    width: 150px;
+
+    /*
+    top: auto;
+    bottom: 25px;
+    left: 0.75em;
+    */
+  }
+  .ad-300x250 .action {
+    position: absolute;
+    bottom: 25px;
+    right: 0.5em;
+  }
+  .ad-300x600 h1 {
+    top: 240px;
+    right: auto;
+    left: 1.5em;
+  }
+  .ad-970x250 h1 {
+    top: auto;
+    bottom: 0.75em;
+    right: auto;
+    left: 1.5em;
+  }
+
+
+  .ad-300x250 .image {
+    width: 300px;
+    height: 250px;
+  }
+  .ad-300x600 .image {
+    width: 300px;
+    height: 300px;
+  }
+  .ad-970x250 .image {
+    width: 300px;
+    height: 250px;
+  }
+
+  @supports (object-fit: cover) and (object-position: top) {
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
   .ad-300x250 p.action {
     color: inherit;
   }
 
-  .ad-300x250 div {
-    font-size: 0.875em;
+  .image {
+    position: relative;
+  }
+  .image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  }
+  .ad-300x250 .image:after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .ad-300x250 .details {
     color: white;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0.5em 1.5em;
+    padding: 3.75em 1em 1em 1em;
     box-sizing: border-box;
   }
-  .ad-300x250 h1 {
-    position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+  .ad-300x250 .details h2,
+  .ad-300x250 .details p {
+    font-size: 0.75em;
+  }
+  .ad-300x250 .details p.progress {
     font-size: inherit;
+    color: black;
   }
 
   .ad-300x600 {
@@ -51,33 +207,39 @@
   }
   .ad-300x600 a {
     height: 100%;
+    /*
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    */
   }
-  .ad-300x600 div {
+  .ad-300x600 .details {
     padding: 1.5em;
+    box-sizing: border-box;
   }
-  .ad-300x600 h1 {
-    font-size: inherit;
-  }
+
 
   .ad-970x250 {
     height: 100%;
   }
   .ad-970x250 a {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
   }
-  .ad-970x250 h1 {
-    position: absolute;
-    top: 1.5em;
-    right: 1.5em;
-    font-size: inherit;
+  .ad-970x250 a:after {
+    content: "";
+    display: table;
+    clear: both;
   }
+  .ad-970x250 a .image {
+    float: left;
+    width: 300px;
+  }
+  .ad-970x250 a .details {
+    float: left;
+    width: 670px;
+    padding: 1.5em;
+    box-sizing: border-box;
+  }
+

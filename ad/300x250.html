@@ -10,56 +10,29 @@
 
 <div class="ad-300x250">
   <a href="" id="lend_link">
-    <img id="loan_image" src="https://www-kiva-org.global.ssl.fastly.net/img/w960h600/154db2221ee7e35a5ee0f8ec4cb04c03.jpg" alt="" />
+    <div class="image"><img id="loan_image" src="" alt="" /></div>
 
-    <div>
-      <h1>Kiva</h1>
+    <div class="details">
+      <h1><img src="../images/kiva-paypal-white.png" alt="Kiva PayPal" width="200" /></h1>
 
-      <h2 id="name">Seth</h2>
+      <h2 class="name" id="name"></h2>
+      <p class="location" id="location"></p>
 
-      <p class="location" id="location">United States</p>
-      <p class="description" id="description">A loan of $5,000 helps me produce my original lighting designs at a lower cost per unit!</p>
+      <p class="description" id="description"></p>
       <p class="progress">
-        <progress id="progress" max="100" value="68.5">68.5%</progress>
-        <span id="progress_text">$1,575 to go</span>
+        <progress id="progress" max="100" value="0"></progress>
+        <span class="text" id="progress_text"></span>
       </p>
 
       <p class="action">Lend Now</p>
     </div>
   </a>
-
-  <script type="text/javascript">
-    var imageElem = document.getElementById('loan_image');
-    var linkElem = document.getElementById('lend_link');
-    var nameElem = document.getElementById('name');
-    var locationElem = document.getElementById('location');
-    var descriptionElem = document.getElementById('description');
-    var progressElem = document.getElementById('progress');
-    var progressTextElem = document.getElementById('progress_text');
-
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', function() {
-      var loans = JSON.parse(this.responseText)["loans"];
-
-      var kivaData = loans[Math.floor(Math.random() * loans.length)];
-
-      imageElem.setAttribute('src', 'https://www.kiva.org/img/w960h600/' + kivaData["image"]["id"] + '.jpg');
-      linkElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
-      nameElem.innerHTML = kivaData["name"];
-      locationElem.innerHTML = kivaData["location"]["country"];
-      var loanAmount = kivaData["loan_amount"];
-      var fundedAmount = kivaData["funded_amount"];
-      var fundingLeft = kivaData["loan_amount"] - kivaData["funded_amount"];
-      var fundingPercentage = Math.floor((fundedAmount / loanAmount) * 100);
-
-      descriptionElem.innerHTML = "A loan of $" + loanAmount + " helps " + kivaData["use"];
-      progressElem.setAttribute('value', fundingPercentage);
-      progressTextElem.innerText = '$' + fundingLeft.toLocaleString() + ' to go';
-    });
-    xhr.open('GET', 'https://api.kivaws.org/v1/loans/search.json?status=fundraising&sort_by=amount_remaining');
-    xhr.send();
-  </script>
 </div>
+
+<script>
+  var imageSize = 'w300h250';
+</script>
+<script src="../ad.js"></script>
 
 </body>
 </html>
