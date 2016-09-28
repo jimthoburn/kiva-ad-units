@@ -229,8 +229,12 @@
     */
   }
   .ad-300x600 .details {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #efefef;
     padding: 2.25em 1.5em;
     box-sizing: border-box;
+    height: 528px; /* 550 - 2em */
   }
 
 
@@ -252,7 +256,10 @@
   .ad-970x250 a .details {
     float: left;
     width: 670px;
-    padding: 2.25em;
+    padding: 2em;
     box-sizing: border-box;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: #efefef;
   }
 
