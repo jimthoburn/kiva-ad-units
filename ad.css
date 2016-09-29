@@ -44,6 +44,10 @@
     width: 970px;
     height: 250px;
   }
+  .hidden .image img,
+  .hidden .description {
+    visibility: hidden;
+  }
 
 
   /* =Image
