@@ -4,6 +4,7 @@
   }
   body {
     background: white;
+    background: rgb(250, 250, 250);
     color: rgb(44, 46, 47); /* @black */
     margin: 0;
     padding: 0;
@@ -21,12 +22,13 @@
   }
 
   p {
-    margin-top: 1.5em;
-    margin-bottom: 0.75em
+    margin-top: 1.25em;
+    margin-bottom: 0.675em
   }
   p.action {
     margin-top: 1.125em;
-    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
     background-color: rgb(38, 59, 128); /* @dark-blue */
     background: rgb(100, 165, 68); /* @green */
     background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
@@ -54,9 +56,10 @@
      appearance: none;
 
     width: 100%;
-    height: 2em;
+    height: 0.75em;
     margin: 0;
     display: block;
+    border-radius: 0.5em;
   }
 
   /* KUDOS: https://css-tricks.com/html5-progress-element/ */
@@ -67,6 +70,8 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
     */
     background-color: #efefef;
+    background-color: rgb(102, 102, 102);
+    border-radius: 0.5em;
   }
 
   progress[value]::-webkit-progress-value {
@@ -75,30 +80,21 @@
     background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68));
     border-radius: 2px; 
     */
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
   }
 
   .progress {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-  }
-  .ad-970x250 .progress {
-    left: 300px;
-    width: 670px;
+    position: relative;
+    margin-bottom: 1.25em;
   }
   .progress .text {
-    position: absolute;
-    bottom:0;
-    left: 0;
-    line-height: 2em;
-    width: 100%;
-    text-align: center;
+    display: block;
+    margin-bottom: 0.3125em;
+    color: rgb(102, 102, 102);
   }
 
   .name {
-    display: inline;
     font-size: inherit;
     margin: 0;
     color: rgb(0, 156, 222); /* @blue */
@@ -107,9 +103,14 @@
     color: rgb(30, 186, 232); /* @blue */
   }
   .location {
-    display: inline;
     margin: 0;
     font-weight: bold;
+  }
+
+
+  .ad-970x250 .name,
+  .ad-970x250 .location {
+    display: inline;
   }
 
   .ad-300x250 h1,
@@ -117,8 +118,8 @@
   .ad-970x250 h1 {
     font-size: inherit;
     position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+    top: 1.25em;
+    right: 1.25em;
   }
   .ad-300x250 h1 {
     top: 0.25em;
@@ -138,27 +139,27 @@
     right: 0.75em;
   }
   .ad-300x600 h1 {
-    top: 0.75em;
+    top: 0.675em;
     right: auto;
-    left: 1.5em;
+    left: 1.25em;
   }
   .ad-970x250 h1 {
     top: 0.75em;
     right: auto;
-    left: 1.5em;
+    left: 1.25em;
   }
 
 
   .ad-300x250 .image {
     width: 300px;
-    height: 250px;
+    height: 125px;
   }
   .ad-300x600 .image {
     width: 300px;
-    height: 250px;
+    height: 300px;
   }
   .ad-970x250 .image {
-    width: 300px;
+    width: 485px;
     height: 250px;
   }
 
@@ -197,14 +198,8 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   }
   .ad-300x250 .details {
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 3.75em 1em 1em 1em;
     box-sizing: border-box;
+    padding: 0.75em;
   }
   .ad-300x250 .details h2,
   .ad-300x250 .details p {
@@ -232,11 +227,9 @@
     border-width: 0 1px;
     border-style: solid;
     border-color: #efefef;
-    padding: 2.25em 1.5em;
+    padding: 1.25em 1.25em 0;
     box-sizing: border-box;
-    height: 528px; /* 550 - 2em */
   }
-
 
   .ad-970x250 {
     height: 100%;
@@ -251,15 +244,39 @@
   }
   .ad-970x250 a .image {
     float: left;
-    width: 300px;
   }
   .ad-970x250 a .details {
     float: left;
-    width: 670px;
-    padding: 2em;
+    width: 485px;
+    padding: 1.25em 1.25em 0 1.25em;
     box-sizing: border-box;
     border-width: 1px 1px 0 0;
     border-style: solid;
     border-color: #efefef;
   }
+
+
+
+  .ad-300x600 a .details,
+  .ad-970x250 a .details  {
+    background: #efefef;
+    background: rgb(250, 250, 250);
+    border-color: transparent;
+  }
+  progress[value]::-webkit-progress-bar {
+    background: rgb(224, 224, 224);
+    background: #efefef;
+    background-color: rgb(178, 178, 178);
+  }
+
+
+  .ad-970x250 .description {
+    height: 2.5em;
+    overflow: hidden;
+  }
+  .ad-300x600 .description {
+    height: 5em;
+    overflow: hidden;
+  }
+
 
