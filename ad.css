@@ -28,6 +28,9 @@
   p.progress {
     margin-top: 1.25em;
   }
+  .ad-300x600 p.progress {
+    margin-top: 1.875em;
+  }
   p.action {
     margin-top: 1.125em;
     margin-bottom: 0;
@@ -184,12 +187,12 @@
     height: 250px;
   }
 
-  @supports (object-fit: cover) and (object-position: top) {
+  @supports (object-fit: cover) and (object-position: 50% 25%) {
     .image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: 50% 25%;
     }
   }
 
