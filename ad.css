@@ -1,59 +1,74 @@
 
-  html, body {
-    height: 100%;
-  }
+
+  /* =Elements
+  ----------------------------------------------- */
   body {
-    background: white;
-    background: rgb(250, 250, 250);
-    color: rgb(44, 46, 47); /* @black */
     margin: 0;
     padding: 0;
-    font: 100%/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  h1, h2, h3 {
+    font-size: inherit;
   }
-  a {
-    color: inherit;
-    text-decoration: inherit;
-    display: block;
-  }
-
-  p {
+  h1, h2, h3, p {
     margin-top: 0.675em;
     margin-bottom: 0.675em
   }
-  p.progress {
-    margin-top: 1.25em;
+
+
+  /* =Container (Link)
+  ----------------------------------------------- */
+  .ad-300x250,
+  .ad-300x600,
+  .ad-970x250 {
+    display: block;
+    background: rgb(250, 250, 250);
+    color: rgb(44, 46, 47); /* @black */
+    font: 100%/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
   }
-  .ad-300x600 p.progress {
-    margin-top: 1.875em;
+  .ad-300x250 {
+    width: 300px;
+    height: 250px;
   }
-  p.action {
-    margin-top: 1.125em;
-    margin-bottom: 0;
-    text-align: center;
-    background-color: rgb(38, 59, 128); /* @dark-blue */
-    background: rgb(100, 165, 68); /* @green */
-    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
-    color: white;
-    font-weight: bold;
-    padding: 0.575em 1.875em;
-    border-radius: 1.875em;
+  .ad-300x600 {
+    width: 300px;
+    height: 600px;
   }
-  a:hover p.action,
-  a:active p.action,
-  a:focus p.action {
-    background: linear-gradient(86deg, rgb(0, 136, 202), rgb(80, 145, 48)); /* @blue */ /* @green */
+  .ad-970x250 {
+    width: 970px;
+    height: 250px;
   }
+
+
+  /* =Image
+  ----------------------------------------------- */
+  .ad-300x250 .image {
+    width: 300px;
+    height: 125px;
+  }
+  .ad-300x600 .image {
+    width: 300px;
+    height: 300px;
+  }
+  .ad-970x250 .image {
+    width: 485px;
+    height: 250px;
+  }
+
+  /* Show a dark background while the image is loading */
   .image {
-    background: black;
+    background: rgb(102, 102, 102);
+  }
+
+  /* Center the image */
+  .image {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
+    position: relative;
   }
   .image img {
     display: block;
@@ -61,6 +76,92 @@
     margin-right: auto;
   }
 
+  /* Make the image fill the available space */
+  @supports (object-fit: cover) and (object-position: 50% 25%) {
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 25%;
+    }
+  }
+
+  /* Add a gradient above the image so the logos will be more readable */
+  .image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  }
+
+
+  /* =Kiva PayPal Logos
+  ----------------------------------------------- */
+  .ad-300x250 h1,
+  .ad-300x600 h1,
+  .ad-970x250 h1 {
+    position: absolute;
+    top: 0.675em;
+    left: 1.25em;
+  }
+  .ad-300x250 h1 {
+    top: 0.25em;
+    left: 1em;
+  }
+  .ad-300x250 h1 img {
+    width: 150px;
+    height: auto;
+  }
+
+
+  /* =Name and Location
+  ----------------------------------------------- */
+  .name {
+    font-size: inherit;
+    margin: 0;
+    color: rgb(0, 156, 222); /* @blue */
+  }
+  .location {
+    margin: 0;
+    font-weight: bold;
+  }
+  .ad-300x250 .name,
+  .ad-300x250 .location,
+  .ad-970x250 .name,
+  .ad-970x250 .location {
+    display: inline;
+  }
+
+
+  /* =Description
+  ----------------------------------------------- */
+  .ad-300x250 .description {
+    height: 6.25em; /* 5 lines (1.25em x 5) */
+    overflow: hidden;
+  }
+  .ad-970x250 .description {
+    height: 3.75em; /* 3 lines (1.25em x 3) */
+    overflow: hidden;
+  }
+  .ad-300x600 .description {
+    height: 5em; /* 4 lines (1.25em x 4) */
+    overflow: hidden;
+  }
+
+
+  /* =Progress
+  ----------------------------------------------- */
+  p.progress {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+  .ad-300x600 p.progress {
+    margin-top: 1.875em;
+  }
   progress {
     /* Reset the default appearance */
     -webkit-appearance: none;
@@ -71,83 +172,61 @@
     margin: 0;
     display: block;
     border-radius: 0.5em;
+    background-color: rgb(178, 178, 178);
+    color: rgb(100, 165, 68); /* @green */
+    border-width: 0;
   }
 
-  /* KUDOS: https://css-tricks.com/html5-progress-element/ */
-  progress[value]::-webkit-progress-bar {
-    /*
-    background-color: #eee;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-    */
-    background-color: #efefef;
-    background-color: rgb(102, 102, 102);
+  progress::-webkit-progress-bar {
+    background-color: rgb(178, 178, 178);
     border-radius: 0.5em;
   }
 
-  progress[value]::-webkit-progress-value {
+  progress::-ms-fill {
     background: rgb(100, 165, 68); /* @green */
-    /*
-    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68));
-    border-radius: 2px; 
-    */
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  progress::-moz-progress-bar {
+    background: rgb(100, 165, 68); /* @green */
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  progress::-webkit-progress-value {
+    background: rgb(100, 165, 68); /* @green */
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
   }
 
-  .progress {
-    position: relative;
-    margin-bottom: 1.25em;
-  }
   .progress .text {
     display: block;
     margin-bottom: 0.3125em;
     color: rgb(102, 102, 102);
   }
 
-  .name {
-    font-size: inherit;
-    margin: 0;
-    color: rgb(0, 156, 222); /* @blue */
-  }
-  .ad-300x250 .name {
-    color: rgb(30, 186, 232); /* @blue */
-  }
-  .location {
-    margin: 0;
+
+  /* =Call to Action (Button)
+  ----------------------------------------------- */
+  p.action {
+    margin-top: 1.125em;
+    margin-bottom: 0;
+    text-align: center;
+    background: rgb(100, 165, 68); /* @green */
+    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
+    color: white;
     font-weight: bold;
+    padding: 0.575em 1.875em;
+    border-radius: 1.875em;
+  }
+  a:hover  p.action,
+  a:active p.action,
+  a:focus  p.action {
+    background: linear-gradient(86deg, rgb(0, 136, 202), rgb(80, 145, 48)); /* @blue */ /* @green */
   }
 
 
-  .ad-300x250 .name,
-  .ad-300x250 .location,
-  .ad-970x250 .name,
-  .ad-970x250 .location {
-    display: inline;
-  }
-
-  .ad-300x250 h1,
-  .ad-300x600 h1,
-  .ad-970x250 h1 {
-    font-size: inherit;
-    position: absolute;
-    top: 1.25em;
-    right: 1.25em;
-  }
-  .ad-300x250 h1 {
-    top: 0.25em;
-    right: auto;
-    left: 1em;
-    width: 150px;
-
-    /*
-    top: auto;
-    bottom: 25px;
-    left: 0.75em;
-    */
-  }
-
-
+  /* =300 x 250
+  ----------------------------------------------- */
   .ad-300x250 .description {
     width: 50%;
   }
@@ -166,62 +245,6 @@
     bottom: 1.25em;
     margin: 0;
   }
-
-  .ad-300x600 h1 {
-    top: 0.675em;
-    right: auto;
-    left: 1.25em;
-  }
-  .ad-970x250 h1 {
-    top: 0.675em;
-    right: auto;
-    left: 1.25em;
-  }
-
-
-  .ad-300x250 .image {
-    width: 300px;
-    height: 125px;
-  }
-  .ad-300x600 .image {
-    width: 300px;
-    height: 300px;
-  }
-  .ad-970x250 .image {
-    width: 485px;
-    height: 250px;
-  }
-
-  @supports (object-fit: cover) and (object-position: 50% 25%) {
-    .image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 25%;
-    }
-  }
-
-  .image {
-    position: relative;
-  }
-  .image:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
-  }
-  /*
-  .ad-970x250 .image:after {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
-  }
-  */
-  .ad-300x250 .image:after {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
-  }
   .ad-300x250 .details {
     box-sizing: border-box;
     padding: 0.675em 0.675em 0;
@@ -231,77 +254,35 @@
     font-size: 0.75em;
   }
 
+
+  /* =300 x 600
+  ----------------------------------------------- */
   .ad-300x600 {
     height: 100%;
   }
-  .ad-300x600 a {
+  .ad-300x600 {
     height: 100%;
-    /*
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    */
   }
   .ad-300x600 .details {
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: #efefef;
     padding: 1.25em 1.25em 0;
     box-sizing: border-box;
   }
 
-  .ad-970x250 {
-    height: 100%;
-  }
-  .ad-970x250 a {
-    height: 100%;
-  }
-  .ad-970x250 a:after {
+
+  /* =970 x 250
+  ----------------------------------------------- */
+  .ad-970x250:after {
     content: "";
     display: table;
     clear: both;
   }
-  .ad-970x250 a .image {
+  .ad-970x250 .image {
     float: left;
   }
-  .ad-970x250 a .details {
+  .ad-970x250 .details {
     float: left;
     width: 485px;
-    padding: 1.25em 1.25em 0 1.25em;
+    padding: 1.25em 1.25em 0;
     box-sizing: border-box;
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    border-color: #efefef;
   }
-
-
-
-  .ad-300x600 a .details,
-  .ad-970x250 a .details  {
-    background: #efefef;
-    background: rgb(250, 250, 250);
-    border-color: transparent;
-  }
-  progress[value]::-webkit-progress-bar {
-    background: rgb(224, 224, 224);
-    background: #efefef;
-    background-color: rgb(178, 178, 178);
-  }
-
-
-  .ad-300x250 .description {
-    height: 6.25em;
-    overflow: hidden;
-  }
-  .ad-970x250 .description {
-    height: 3.75em;
-    overflow: hidden;
-  }
-  .ad-300x600 .description {
-    height: 5em;
-    overflow: hidden;
-  }
-
 
