@@ -216,7 +216,7 @@
   }
   .ad-300x250 .details {
     box-sizing: border-box;
-    padding: 0.675em;
+    padding: 0.675em 0.675em 0;
   }
   .ad-300x250 .details h2,
   .ad-300x250 .details p {
