@@ -22,8 +22,11 @@
   }
 
   p {
-    margin-top: 1.25em;
+    margin-top: 0.675em;
     margin-bottom: 0.675em
+  }
+  p.progress {
+    margin-top: 1.25em;
   }
   p.action {
     margin-top: 1.125em;
@@ -34,8 +37,8 @@
     background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
     color: white;
     font-weight: bold;
-    padding: 0.75em 2.25em;
-    border-radius: 2.5em;
+    padding: 0.575em 1.875em;
+    border-radius: 1.875em;
   }
   .image {
     background: black;
@@ -56,7 +59,7 @@
      appearance: none;
 
     width: 100%;
-    height: 0.75em;
+    height: 0.675em;
     margin: 0;
     display: block;
     border-radius: 0.5em;
@@ -108,6 +111,8 @@
   }
 
 
+  .ad-300x250 .name,
+  .ad-300x250 .location,
   .ad-970x250 .name,
   .ad-970x250 .location {
     display: inline;
@@ -133,18 +138,34 @@
     left: 0.75em;
     */
   }
-  .ad-300x250 .action {
-    position: absolute;
-    bottom: 2.5em;
-    right: 0.75em;
+
+
+  .ad-300x250 .description {
+    width: 50%;
   }
+  .ad-300x250 .progress {
+    width: 40%;
+    position: absolute;
+    bottom: 4.9em;
+    right: 0.675em;
+    margin: 0;
+  }
+  .ad-300x250 .action {
+    width: 40%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0.675em;
+    bottom: 0.675em;
+    margin: 0;
+  }
+
   .ad-300x600 h1 {
     top: 0.675em;
     right: auto;
     left: 1.25em;
   }
   .ad-970x250 h1 {
-    top: 0.75em;
+    top: 0.675em;
     right: auto;
     left: 1.25em;
   }
@@ -172,10 +193,6 @@
     }
   }
 
-  .ad-300x250 p.action {
-    color: inherit;
-  }
-
   .image {
     position: relative;
   }
@@ -199,15 +216,11 @@
   }
   .ad-300x250 .details {
     box-sizing: border-box;
-    padding: 0.75em;
+    padding: 0.675em;
   }
   .ad-300x250 .details h2,
   .ad-300x250 .details p {
     font-size: 0.75em;
-  }
-  .ad-300x250 .details p.progress {
-    font-size: inherit;
-    color: rgb(44, 46, 47); /* @black */
   }
 
   .ad-300x600 {
@@ -270,6 +283,10 @@
   }
 
 
+  .ad-300x250 .description {
+    height: 6.25em;
+    overflow: hidden;
+  }
   .ad-970x250 .description {
     height: 2.5em;
     overflow: hidden;
