@@ -59,7 +59,7 @@
 
   /* Show a dark background while the image is loading */
   .image {
-    background: rgb(102, 102, 102);
+    background: rgb(44, 46, 47); /* @black */
   }
 
   /* Center the image */
@@ -69,8 +69,11 @@
     align-content: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
   }
   .image img {
+    max-width: 100%;
+    max-height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -115,6 +118,14 @@
   .ad-300x250 h1 img {
     width: 150px;
     height: auto;
+  }
+
+
+  /* =Details
+  ----------------------------------------------- */
+  .details {
+    padding: 1.25em 1.25em 0;
+    box-sizing: border-box;
   }
 
 
@@ -246,26 +257,11 @@
     margin: 0;
   }
   .ad-300x250 .details {
-    box-sizing: border-box;
     padding: 0.675em 0.675em 0;
   }
   .ad-300x250 .details h2,
   .ad-300x250 .details p {
     font-size: 0.75em;
-  }
-
-
-  /* =300 x 600
-  ----------------------------------------------- */
-  .ad-300x600 {
-    height: 100%;
-  }
-  .ad-300x600 {
-    height: 100%;
-  }
-  .ad-300x600 .details {
-    padding: 1.25em 1.25em 0;
-    box-sizing: border-box;
   }
 
 
@@ -282,7 +278,5 @@
   .ad-970x250 .details {
     float: left;
     width: 485px;
-    padding: 1.25em 1.25em 0;
-    box-sizing: border-box;
   }
 
