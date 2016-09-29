@@ -12,7 +12,7 @@ xhr.addEventListener('load', function() {
 
   var kivaData = loans[Math.floor(Math.random() * loans.length)];
 
-  imageElem.setAttribute('src', 'https://www.kiva.org/img/w600h600/' + kivaData["image"]["id"] + '.jpg');
+  imageElem.setAttribute('src', 'https://www.kiva.org/img/w450h450/' + kivaData["image"]["id"] + '.jpg');
   linkElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
   nameElem.innerHTML = kivaData["name"];
   locationElem.innerHTML = kivaData["location"]["country"];
