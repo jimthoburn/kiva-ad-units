@@ -30,6 +30,7 @@
     color: rgb(44, 46, 47); /* @black */
     font: 100%/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
+    position: relative;
     overflow: hidden;
   }
   .ad-300x250 {
@@ -252,16 +253,16 @@
   .ad-300x250 .progress {
     width: 40%;
     position: absolute;
-    bottom: 4.9em;
-    right: 0.675em;
+    top: 164px;
+    left: 173px;
     margin: 0;
   }
   .ad-300x250 .action {
     width: 40%;
     box-sizing: border-box;
     position: absolute;
-    right: 0.675em;
-    bottom: 1.25em;
+    top: 207px;
+    left: 173px;
     margin: 0;
   }
   .ad-300x250 .details {
