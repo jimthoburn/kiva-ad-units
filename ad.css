@@ -43,6 +43,11 @@
     padding: 0.575em 1.875em;
     border-radius: 1.875em;
   }
+  a:hover p.action,
+  a:active p.action,
+  a:focus p.action {
+    background: linear-gradient(86deg, rgb(0, 136, 202), rgb(80, 145, 48)); /* @blue */ /* @green */
+  }
   .image {
     background: black;
     display: flex;
