@@ -299,13 +299,19 @@
   }
 
 
-  /* =Join Us
+  /* =Learn More
   ----------------------------------------------- */
-  .join-us {
+  .learn-more {
     font-size: 0.75em;
     text-align: center;
     max-width: 260px;
   }
+  /*
+  .learn-more a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  */
 
 
   /* =300 x 250
@@ -328,21 +334,21 @@
     left: 173px;
     margin: 0;
   }
-  .ad-300x250 .join-us {
+  .ad-300x250 .learn-more {
     position: absolute;
     top: 230px;
     left: 173px;
     margin: 0;
     width: 40%;
   }
-  .ad-970x250 .join-us {
+  .ad-970x250 .learn-more {
     position: absolute;
     left: 800px;
     top: 188px;
     text-align: left;
   }
   /*
-  .ad-300x250 .join-us {
+  .ad-300x250 .learn-more {
     margin-top: 0;
     max-width: none;
   }
