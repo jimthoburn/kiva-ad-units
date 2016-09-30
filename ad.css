@@ -128,6 +128,12 @@
     width: 150px;
     height: auto;
   }
+  .tagline {
+    position: absolute;
+    top: 3.125em;
+    left: 1.25em;
+    color: white;
+  }
 
 
   /* =Details
