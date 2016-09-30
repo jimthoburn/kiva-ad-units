@@ -28,6 +28,7 @@ xhr.addEventListener('load', function() {
   imageElem.setAttribute('alt', kivaData["name"]);
   linkElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
   linkNameElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
+  descriptionElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
   nameElem.innerHTML = kivaData["name"];
   locationElem.innerHTML = kivaData["location"]["country"];
   var loanAmount = kivaData["loan_amount"];
