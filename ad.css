@@ -151,11 +151,11 @@
   }
   .name {
     font-size: inherit;
+    font-weight: inherit;
     margin: 0;
   }
   .location {
     margin: 0;
-    font-weight: bold;
     opacity: 0.5
   }
 
