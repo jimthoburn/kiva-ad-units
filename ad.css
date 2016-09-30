@@ -74,6 +74,7 @@
 
   /* Show a dark background while the image is loading */
   .image {
+    display: block;
     background: rgb(44, 46, 47); /* @black */
   }
 
@@ -152,6 +153,9 @@
 
   /* =Name and Location
   ----------------------------------------------- */
+  a.name-location {
+    text-decoration: none;
+  }
   .name,
   .location {
     display: inline;

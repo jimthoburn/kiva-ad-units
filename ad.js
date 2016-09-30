@@ -1,6 +1,8 @@
 var container = document.getElementById('ad-container');
 var imageElem = document.getElementById('loan_image');
 var linkElem = document.getElementById('lend_link');
+var linkImageElem = document.getElementById('lend_link_logo');
+var linkNameElem = document.getElementById('lend_link_name');
 var nameElem = document.getElementById('name');
 var locationElem = document.getElementById('location');
 var descriptionElem = document.getElementById('description');
@@ -26,6 +28,8 @@ xhr.addEventListener('load', function() {
   imageElem.setAttribute('src', 'https://www.kiva.org/img/w480h480/' + kivaData["image"]["id"] + '.jpg');
   imageElem.setAttribute('alt', kivaData["name"]);
   linkElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
+  linkNameElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
+  linkImageElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
   nameElem.innerHTML = kivaData["name"];
   locationElem.innerHTML = kivaData["location"]["country"];
   var loanAmount = kivaData["loan_amount"];
