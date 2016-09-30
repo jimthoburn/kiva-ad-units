@@ -259,8 +259,6 @@
   .progress .text a:focus {
     opacity: 1;
   }
-  .progress .text .value {
-  }
 
 
   /* =Call to Action (Button)
@@ -294,7 +292,7 @@
   .ad-300x250 .progress {
     width: 40%;
     position: absolute;
-    top: 164px;
+    top: 154px;
     left: 173px;
     margin: 0;
   }
