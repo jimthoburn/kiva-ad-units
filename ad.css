@@ -248,9 +248,18 @@
   .progress .text {
     display: block;
     margin-bottom: 0.3125em;
+    font-size: 0.875em;
+  }
+  .progress .text a {
+    opacity: 0.5;
+    text-decoration: none;
+  }
+  .progress .text a:hover,
+  .progress .text a:active,
+  .progress .text a:focus {
+    opacity: 1;
   }
   .progress .text .value {
-    opacity: 0.5;
   }
 
 
