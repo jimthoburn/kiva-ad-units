@@ -48,7 +48,11 @@
     height: 250px;
   }
   .hidden .image img,
-  .hidden .description {
+  .hidden .name,
+  .hidden .location,
+  .hidden .description,
+  .hidden .progress .value,
+  .hidden .progress progress {
     visibility: hidden;
   }
 
