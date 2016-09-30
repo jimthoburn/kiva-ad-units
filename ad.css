@@ -111,6 +111,9 @@
     background: rgba(0, 0, 0, 0.5);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
   }
+  .ad-970x250 .image:after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  }
 
 
   /* =Kiva PayPal Logos
