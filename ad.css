@@ -259,6 +259,10 @@
   .progress .text a:focus {
     opacity: 1;
   }
+  .ad-970x250 .action,
+  .ad-970x250 .progress {
+    max-width: 260px;
+  }
 
 
   /* =Call to Action (Button)
