@@ -216,13 +216,6 @@
 
   /* =Progress
   ----------------------------------------------- */
-  p.progress {
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
-  }
-  .ad-300x600 p.progress {
-    margin-top: 1.5em;
-  }
   progress {
     /* Reset the default appearance */
     -webkit-appearance: none;
@@ -302,6 +295,15 @@
   }
 
 
+  /* =Join Us
+  ----------------------------------------------- */
+  .join-us {
+    font-size: 0.75em;
+    text-align: center;
+    max-width: 260px;
+  }
+
+
   /* =300 x 250
   ----------------------------------------------- */
   .ad-300x250 .description {
@@ -310,7 +312,7 @@
   .ad-300x250 .progress {
     width: 40%;
     position: absolute;
-    top: 168px;
+    top: 164px;
     left: 173px;
     margin: 0;
   }
@@ -318,10 +320,29 @@
     width: 40%;
     box-sizing: border-box;
     position: absolute;
-    top: 213px;
+    top: 195px;
     left: 173px;
     margin: 0;
   }
+  .ad-300x250 .join-us {
+    position: absolute;
+    top: 230px;
+    left: 173px;
+    margin: 0;
+    width: 40%;
+  }
+  .ad-970x250 .join-us {
+    position: absolute;
+    left: 800px;
+    top: 188px;
+    text-align: left;
+  }
+  /*
+  .ad-300x250 .join-us {
+    margin-top: 0;
+    max-width: none;
+  }
+  */
   .ad-300x250 .details {
     padding: 0.675em 0.675em 0;
   }
@@ -331,6 +352,7 @@
   }
   .ad-300x250 .details .description {
     font-size: 0.875em;
+    margin-top: 0.45em;
   }
 
 
