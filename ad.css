@@ -143,6 +143,10 @@
 
   /* =Name and Location
   ----------------------------------------------- */
+  .name,
+  .location {
+    display: inline;
+  }
   .name {
     font-size: inherit;
     margin: 0;
@@ -151,12 +155,6 @@
     margin: 0;
     font-weight: bold;
     opacity: 0.5
-  }
-  .ad-300x250 .name,
-  .ad-300x250 .location,
-  .ad-970x250 .name,
-  .ad-970x250 .location {
-    display: inline;
   }
 
 
