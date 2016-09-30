@@ -35,6 +35,9 @@
     position: relative;
     overflow: hidden;
   }
+  .ad-970x250 {
+    background: linear-gradient(86deg, rgb(0, 156, 222), rgb(0, 156, 222) 50%, rgb(100, 165, 68)); /* @blue */ /* @green */
+  }
   .ad-300x250 {
     width: 300px;
     height: 250px;
