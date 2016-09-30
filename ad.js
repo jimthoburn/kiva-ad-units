@@ -1,3 +1,4 @@
+var container = document.getElementById('ad-container');
 var imageElem = document.getElementById('loan_image');
 var linkElem = document.getElementById('lend_link');
 var nameElem = document.getElementById('name');
@@ -7,10 +8,10 @@ var progressElem = document.getElementById('progress');
 var progressTextElem = document.getElementById('progress_text');
 
 function hide() {
-  lend_link.className += ' hidden';
+  container.className += ' hidden';
 }
 function show() {
-  lend_link.className = lend_link.className.replace(/hidden/g, '');
+  container.className = container.className.replace(/hidden/g, '');
 }
 
 var xhr = new XMLHttpRequest();
