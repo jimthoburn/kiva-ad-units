@@ -167,15 +167,36 @@
   }
   .ad-300x250 .description {
     height: 5em; /* 5 lines (1.25em x 4) */
-    overflow: hidden;
+    overflow-y: hidden;
+
+    /* OPTIONAL: Show an ellipses if the text has been truncated
+    http://dropshado.ws/post/1015351370/webkit-line-clamp */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
   .ad-970x250 .description {
     height: 2.5em; /* 2 lines (1.25em x 2) */
-    overflow: hidden;
+    overflow-y: hidden;
+
+    /* OPTIONAL: Show an ellipses if the text has been truncated
+    http://dropshado.ws/post/1015351370/webkit-line-clamp */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .ad-300x600 .description {
     height: 3.75em; /* 3 lines (1.25em x 3) */
-    overflow: hidden;
+    overflow-y: hidden;
+
+    /* OPTIONAL: Show an ellipses if the text has been truncated
+    http://dropshado.ws/post/1015351370/webkit-line-clamp */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
 
@@ -186,7 +207,7 @@
     margin-bottom: 1.25em;
   }
   .ad-300x600 p.progress {
-    margin-top: 1.875em;
+    margin-top: 1.5em;
   }
   progress {
     /* Reset the default appearance */
