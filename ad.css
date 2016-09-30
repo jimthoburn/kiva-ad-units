@@ -19,17 +19,19 @@
     border-width: 0;
   }
 
+  a {
+    color: inherit;
+  }
+
 
   /* =Container (Link)
   ----------------------------------------------- */
   .ad-300x250,
   .ad-300x600,
   .ad-970x250 {
-    display: block;
     background: linear-gradient(86deg, rgb(0, 156, 222), rgb(100, 165, 68)); /* @blue */ /* @green */
     color: white;
     font: 100%/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
     position: relative;
     overflow: hidden;
   }
@@ -246,6 +248,8 @@
   .progress .text {
     display: block;
     margin-bottom: 0.3125em;
+  }
+  .progress .text .value {
     opacity: 0.5;
   }
 
@@ -256,15 +260,19 @@
     margin-top: 1.125em;
     margin-bottom: 0;
     text-align: center;
+  }
+  p.action a {
+    display: block;
+    text-decoration: none;
     background: rgb(38, 59, 128); /* @dark-blue */
     color: white;
     font-weight: bold;
     padding: 0.575em 1.875em;
     border-radius: 1.875em;
   }
-  a:hover  p.action,
-  a:active p.action,
-  a:focus  p.action {
+  p.action a:hover,
+  p.action a:active,
+  p.action a:focus {
     background: rgb(18, 39, 108); /* @darker-blue */
   }
 
