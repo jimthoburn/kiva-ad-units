@@ -26,9 +26,9 @@ xhr.addEventListener('load', function() {
   imageElem.setAttribute('src', '');
   imageElem.setAttribute('src', 'https://www.kiva.org/img/w480h480/' + kivaData["image"]["id"] + '.jpg');
   imageElem.setAttribute('alt', kivaData["name"]);
-  linkElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
-  linkNameElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
-  descriptionElem.setAttribute('href', 'https://www.kiva.org/lend/' + kivaData["id"]);
+  linkElem.setAttribute('href', linkElem.getAttribute('href') + kivaData["id"]);
+  linkNameElem.setAttribute('href', linkNameElem.getAttribute('href') + kivaData["id"]);
+  descriptionElem.setAttribute('href', descriptionElem.getAttribute('href') + kivaData["id"]);
   nameElem.innerHTML = kivaData["name"];
   locationElem.innerHTML = kivaData["location"]["country"];
   var loanAmount = kivaData["loan_amount"];
